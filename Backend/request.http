@@ -1,0 +1,49 @@
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "truong3",
+    "password": "abc12344"
+}
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "truong3",
+    "password": "abc12344"
+}
+
+### 
+POST http://localhost:3000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjI4MzE5NzRlMTg2OGUyMDM1NDM3MjQiLCJpYXQiOjE2NDY4MDE0MjR9.IT8TGja2L99txyO7jSIQSv-iAquJmJTgOglqkzGbT1c
+
+{
+    "title": "React",
+    "description": "Reactjs",
+    "url": "vuejs.org",
+    "status": "SUBMITED"
+}
+
+###
+GET http://localhost:3000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjI1ZGIwZDIyNmNhMjRjNzRjNjU4MTciLCJpYXQiOjE2NDY2NTg2NDd9.dxYvEdBjVs_f9A4CEj2kGHgrko2ogp-dR5nfpbGgo0Y
+
+###
+PUT http://localhost:3000/api/posts/6225eab783a91463bfd16d4d
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjI1ZGIwZDIyNmNhMjRjNzRjNjU4MTciLCJpYXQiOjE2NDY2NTg2NDd9.dxYvEdBjVs_f9A4CEj2kGHgrko2ogp-dR5nfpbGgo0Y
+
+{
+    "title": "Vue",
+    "description": "VUEEEE",
+    "url": "https://vuejs.org",
+    "status": "LEARNING"
+}
+
+###
+DELETE http://localhost:3000/api/posts/6225eab783a91463bfd16d4d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjI1ZGIwZDIyNmNhMjRjNzRjNjU4MTciLCJpYXQiOjE2NDY2NTg2NDd9.dxYvEdBjVs_f9A4CEj2kGHgrko2ogp-dR5nfpbGgo0Y
